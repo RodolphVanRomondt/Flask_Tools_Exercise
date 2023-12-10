@@ -8,14 +8,10 @@
     {% for choice in question.choices %}
     <label>
         {{ choice.capitalize()}}
-        <input type="radio" value="{{ choice }}" name="answer">
+        <input type="radio" value="{{ choice }}" name="answer" required>
     </label>
     {% endfor %}
     <button>Send</button>
 </form>
-
-{% for msg in get_flashed_messages() %}
-    <p>{{ msg }}</p>
-{% endfor %}
 
 {% endblock %}
